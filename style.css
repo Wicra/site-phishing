@@ -15,13 +15,14 @@
 
 
 /*PAYMENT*/
+
 .visa-card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
     width: 300px;
-    height: 180px;
+    height: 160px;
     background-image: radial-gradient(
       circle 897px at 9% 80.3%,
       rgba(55, 60, 245, 1) 0%,
@@ -30,8 +31,12 @@
     border-radius: 10px;
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    position: relative;
+    position: absolute;
     gap: 15px;
+
+    top: 50%; /* Positionne le haut du div à 50% du conteneur parent */
+    left: 50%; /* Positionne la gauche du div à 50% du conteneur parent */
+    transform: translate(-50%, -50%);
   }
   .logoContainer {
     width: 100%;
@@ -47,6 +52,7 @@
   .svgLogo {
     height: 40px;
     width: auto;
+    padding: 0 2vh 0 0;
   }
   .inputstyle::placeholder {
     color: #ffffff;
@@ -118,6 +124,10 @@
     background: #EF665B;
     border-radius: 8px;
     box-shadow: 0px 0px 5px -3px #111;
+    position: absolute;
+    top: 35%; /* Positionne le haut du div à 50% du conteneur parent */
+    left: 50%; /* Positionne la gauche du div à 50% du conteneur parent */
+    transform: translate(-50%, -50%);
   }
   
   .error__icon {
@@ -146,4 +156,60 @@
   
   .error__close path {
     fill: #fff;
+  }
+
+  /*BTN PAY*/
+
+  .Btn {
+    text-align: center;
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    border: none;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    cursor: pointer;
+
+    position: absolute;
+    overflow: hidden;
+    transition-duration: .3s;
+    top: 65%; /* Positionne le haut du div à 50% du conteneur parent */
+    left: 30%; /* Positionne la gauche du div à 50% du conteneur parent */
+    transform: translate(-50%, -50%);
+  }
+  
+  .svgIcon {
+    width: 16px;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .Btn::before {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    left: -100%;
+    top: 0;
+    transition-duration: .3s;
+    mix-blend-mode: difference;
+  }
+  
+  .Btn:hover::before {
+    transition-duration: .3s;
+    transform: translate(100%,-50%);
+    border-radius: 0;
+  }
+  
+  .Btn:active {
+    transform: translate(5px,5px);
+    transition-duration: .3s;
   }
