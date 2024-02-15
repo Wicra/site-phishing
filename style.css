@@ -178,7 +178,7 @@
     overflow: hidden;
     transition-duration: .3s;
     top: 65%; /* Positionne le haut du div à 50% du conteneur parent */
-    left: 30%; /* Positionne la gauche du div à 50% du conteneur parent */
+    left: 50%; /* Positionne la gauche du div à 50% du conteneur parent */
     transform: translate(-50%, -50%);
   }
   
