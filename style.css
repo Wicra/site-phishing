@@ -1,15 +1,21 @@
 
-.texte{
-    text-align: justify;
-    display: block;
-    justify-content: center;
+
+
+.texte {
+  color: white;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height to center vertically */
+  width: 100vw; /* Full viewport width to center horizontally */
 }
-.texte h1{
-    padding: 4vh 10vh
+.texte h1 {
+  padding: 4vh 10vh;
 }
-.texte p{
-    padding: 1vh 20vw;
-    text-align: justify;
+.texte p {
+  padding: 1vh 20vw;
+  text-align: justify;
 }
 
 
